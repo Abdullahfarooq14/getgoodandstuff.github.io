@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/assets/favicon-19b9457f.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mastermind</title>
+  <script type="module" crossorigin src="/assets/index-643160c1.js"></script>
+  <link rel="stylesheet" href="/assets/index-b8ea6282.css">
+</head>
+
+<body>
+  <div id="app">
+    <div id="main_board">
+      <button id="one_guess_button" class="can_hover">1 Guess Challenge</button>
+      <p id="high-score">High Score: </p>
+      <p id="current-time">Current Time: 0 seconds</p>
+      <div class="row" id="row1">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="score" id="pegs1">
+          <div class="top_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+          <div class="bottom_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row2">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="score" id="pegs2">
+          <div class="top_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+          <div class="bottom_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row3">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="score" id="pegs3">
+          <div class="top_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+          <div class="bottom_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row4">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="score" id="pegs4">
+          <div class="top_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+          <div class="bottom_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row5">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="score" id="pegs5">
+          <div class="top_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+          <div class="bottom_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row6">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="score" id="pegs6">
+          <div class="top_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+          <div class="bottom_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row7">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="score" id="pegs7">
+          <div class="top_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+          <div class="bottom_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row8">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="score" id="pegs8">
+          <div class="top_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+          <div class="bottom_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row9">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="score" id="pegs9">
+          <div class="top_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+          <div class="bottom_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="row10">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="score" id="pegs10">
+          <div class="top_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+          <div class="bottom_row">
+            <div class="score_circle"></div>
+            <div class="score_circle"></div>
+          </div>
+        </div>
+      </div>
+      <button id="submit_guess">Submit guess</button>
+      <p id="lost_text">You lost. But here is the combination just in case you cared.</p>
+      <div id="answer">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <button id="play_again">Play Again</button>
+    </div>
+  </div>
+  
+  
+</body>
+
+</html>
